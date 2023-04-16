@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BW Engenharia</title>
+
+  <meta name="keywords" content="energia solar, placa solar, energia, bombeamento solar, engenharia">
+  <meta name="description" content="A bw engenharia oferece serviço de instalçao de placas solares em industrias, residencias, comercios e no meio rural">
+
+
+
+
+  <!--  IMPORT CSS FILES  -->
+  <link rel="stylesheet" href="src/style/global.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <!--  IMPORT JS FILES   -->
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <script defer src="index.js"></script>
+
+</head>
+
+<body>
+  <!-- Responsive navbar-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container px-5">
+      <a class="navbar-brand" href="#home">BW Engenharia</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
+          class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="#home">Home</a></li>
+          <li class="nav-item ni-mobile"><a class="nav-link" href="#SobreNos">Sobre Nós</a></li>
+          <li class="nav-item ni-dsktp"><a class="nav-link" href="#SobreNosDsktp">Sobre Nós</a></li>
+          <li class="nav-item"><a class="nav-link" href="#Servicos">Serviços</a></li>
+          <li class="nav-item"><a class="nav-link" href="#Solucoes">Soluções</a></li>
+          <li class="nav-item"><a class="nav-link" href="#Faq">Duvidas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header-->
+  <header id="home" class="bg-dark py-5 header-hero">
+    <div class="container px-3">
+      <div class="row gx-5 justify-content-center">
+        <div class="col-lg-6">
+          <div class="text-center my-5 text-hero">
+            <h1 class="display-5 fw-bolder text-white mb-2">Reduza sua conta de luz com nossas instalações solares</h1>
+            <p class="lead text-white-50 mb-4 fw-bolder">Invista em energia solar e economize dinheiro a longo prazo.
+            </p>
+            <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
+              <a class="btn btn-primary btn-lg px-4 me-sm-3" data-bs-toggle="modal" data-bs-target="#modalHeader"
+                id="headerButtonModal" href="#features">Faça seu orçamento</a>
+
+              <!-- Vertically centered modal -->
+              <div class="modal" id="modalHeader" tabindex="-1">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Título do Modal</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+
+                      <!---FORM INSIDE MODAL-->
+                      <form class='needs-validation' method="post" action="./">
+                        <!-- 2 column grid layout with text inputs for the first and last names -->
+                        <div class="row mb-2">
+                          <div class="col">
+                            <div class="form-floating">
+                              <input type="text" class="form-control" required id="form-name" placeholder="João">
+                              <label for="form-name">Nome</label>
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="form-floating mb-3">
+                              <input type="text" class="form-control" required id="form-lastname" placeholder="João">
+                              <label for="form-lastname">Sobrenome</label>
+                            </div>
+                          </div>
+                        </div>
+                        <!--CIDADE E TELEFONE-->
+                        <div class="row mb-2">
+                          <div class="col">
+                            <div class="form-floating">
+                              <input type="text" class="form-control" required id="form-name" placeholder="João">
+                              <label for="form-name">Cidade</label>
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="form-floating mb-3">
+                              <input type="number" class="form-control" required id="form-lastname"
+                                data-mdb-input-mask="+48 999-999-999">
+                              <label for="form-lastname">Telefone</label>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Email input -->
+                        <div class="form-floating mb-4">
+                          <input type="email" class="form-control" required id="form-email"
+                            placeholder="name@example.com">
+                          <label for="form-email">Email</label>
+                        </div>
+                        <!-- Message input -->
+
+
+                        <div class="form-floating mb-4">
+                          <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+                            style="height: 100px"></textarea>
+                          <label for="floatingTextarea2">Comentário</label>
+                        </div>
+
+
+
+                        <!-- Checkbox -->
+                        <div class="form-check d-flex justify-content-center mb-4 no-validate">
+                          <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
+                          <label class="form-check-label" for="form2Example33">
+                            Subscribe to our newsletter
+                          </label>
+                        </div>
+
+                        <input class="btn btn-primary" type="submit" value="Submit">
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Voltar</button>
+                      <button type="button" class="btn btn-primary" action="post">Enviar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>s
+  </header>
+
+  <section class="about">
+
+    <div class="about-wrapper">
+      <div class="about-title" id="SobreNos">
+        <h2>Sobre nós</h2>
+      </div>
+
+      <div class="about-objetivos">
+        <ul class="objetivos-lista p-3">
+          <li class="objetivos-listaItem my-4">
+            <p class="d-inline rounded-circle fs-1 bg-warning bg-gradient mt-3 px-2">1</p>
+            <h3 class="fs-5">Bem-vindo à <spam class="bw">BW Engenharia!</spam> Somos uma empresa jovem e dinâmica que se dedica a projetar e instalar soluções em <strong>energia solar</strong> inovadoras para atender às necessidades energéticas de nossos clientes.</h3>
+          </li>
+          <li class="objetivos-listaItem my-4">
+            <p class="d-inline rounded-circle fs-1 bg-warning bg-gradient px-2">2</p>
+            <h3 class="fs-5">Nossa equipe é composta por profissionais experientes e capacitados nas areas de engenharia e energia renovavel, comprometidos em fornecer serviços de alta qualidade.</h3>
+          </li>
+          <li class="objetivos-listaItem my-4">
+            <p class="d-inline rounded-circle fs-1 bg-warning bg-gradient px-2">3</p>
+            <h3 class="fs-5">Se você estiver procurando por uma empresa de energia solar que possa oferecer solições personalizadas e confiavéis,<strong> <a href="https://wa.me/5592982592715?text=Adorei%20seu%20artigo" target="_blank">entre em contato</a> </strong> conosco. Estamos ansiosos para trabalhar com você.</h3>
+          </li>
+        </ul>
+      </div>
+
+      <div class="about-img">
+
+      </div>
+    </div>
+
+
+  </section>
+
+  <section class="about-dsktp">
+
+    <div class="about-wrapper-dsktp">
+      <div class="about-title-dsktp py-5" id="SobreNosDsktp">
+        <h1 class="text-uppercase ">Sobre nós</h1>
+      </div>
+
+      <div class="about-main-dsktp">
+        <div class="about-objetivos-dsktp">
+          <ul class="objetivos-lista-dsktp">
+            <li class="objetivos-listaItem-dsktp">
+              <p class="fs-1 bg-warning bg-gradient px-2">1</p>
+              <h3 class="mt-5">Bem-vindo à <spam class="bw">BW Engenharia!</spam> Somos uma empresa jovem e dinâmica que se dedica a projetar e instalar soluções em <strong>energia solar</strong> inovadoras para atender às necessidades energéticas de nossos clientes.</h3>
+            </li>
+            <li class="objetivos-listaItem-dsktp">
+              <p class="fs-1 bg-warning bg-gradient px-2">2</p>
+              <h3 class="">Nossa equipe é composta por profissionais experientes e capacitados nas areas de engenharia e energia renovavel, comprometidos em fornecer serviços de alta qualidade.</h3>
+            </li>
+            <li class="objetivos-listaItem-dsktp">
+              <p class="fs-1 bg-warning bg-gradient px-2">3</p>
+              <h3 class="">Se você estiver procurando por uma empresa de energia solar que possa oferecer solições personalizadas e confiavéis,<strong> <a href="https://wa.me/5592982592715?text=Adorei%20seu%20artigo" target="_blank">entre em contato</a> </strong> conosco. Estamos ansiosos para trabalhar com você.</h3>
+            </li>
+          </ul>
+        </div>
+
+        <div class="about-img-dsktp"></div>
+      </div>
+    </div>
+
+
+  </section>
+
+  
+
+  <div class="home-bg py-5 px-5 gap-3" id="Servicos" data-aos="fade-up">
+    <h1 class="servicos-title text-uppercase">Serviços</h1>
+    <div class="row g-4 row-cols-1 row-cols-lg-3">
+      <div class="feature col header-icon">
+        <div>
+          <i class="bi bi-lightbulb-fill head-icon fs-3"></i>
+        </div>
+        <h2 class="text-uppercase mt-3">Projeto</h2>
+        <p class="">Você pode contar com uma consultoria especializada para analisar seu consumo de energia e
+          identificar as oportunidades de economia, bem como um projeto personalizado do sistema fotovotáico. Uma
+          escolha inteligente para o presente e futuro.</p>
+      </div>
+      <div class="feature col header-icon">
+        <div>
+          <i class="bi bi-tools fs-3"></i>
+        </div>
+        <h2 class="text-uppercase mt-3">Instalação</h2>
+        <p class="">A BW oferece testes de eficiência e ajustes, garantindo que seu sistema funcione de maneira correta.
+          Além disso, realizamos monitoramento e manutenção regular do sistema para garantir que opere de forma
+          eficiente e segura.</p>
+      </div>
+      <div class="feature col header-icon">
+        <div>
+          <i class="bi bi-brightness-high-fill head-icon fs-3"></i>
+        </div>
+        <h2 class="text-uppercase mt-3">Sustentabilidade</h2>
+        <p>Com a energia solar, você tem uma fonte de energia renovável e gratuita à disposição. Isso significa
+          que o investimento inicial na instalação de painéis solares pode se traduzir em economia significativa a longo
+          prazo nas contas de energia elétrica.</p>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="slcs pt-5" id="Solucoes">
+
+    <h1 class="servicos-title">Soluções</h1>
+
+    <div class="slcs-" data-aos="fade-up">
+      <div class="slcs-padrao first">
+        <div>
+          <a href="#" class="img-link">
+            <img class="slcs-img" src="./src/images/engenheiros.svg">
+          </a>
+        </div>
+        <div class="slcs-info">
+          <div class="slcs-icon">
+            <h2 class="fw-bold">Industrial</h2>
+            <i class="bi bi-lightning-charge-fill"></i>
+          </div>
+          <p class="slcs-p">Em decorrência do intenso consumo de energia nas indústrias e fábricas, os painéis solares
+            fotovoltaicos têm ganhado destaque crescente nesses segmentos, contribuindo para a redução de gastos e
+            despesas com energia elétrica, além de diminuir os impactos ambientais.</p>
+
+          <a href="https://wa.me/5592982592715?text=Adorei%20seu%20artigo" target="_blank" class="fs-1 text-decoration-none text-success">Faça seu orçamento</a>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="slcs-mobile" data-aos="fade-right">
+      <div class="slcs-padrao">
+        <div>
+          <a href="#" class="img-link">
+            <img class="slcs-img" src="./src/images/casa.svg">
+          </a>
+        </div>
+        <div class="slcs-info">
+          <div class="slcs-icon">
+            <h2 class="fw-bold">Residêncial</h2>
+            <i class="bi bi-house-door-fill icon"></i>
+          </div>
+          <p class="slcs-p">Com a consultoria especializada, analise do seu consumo de energia, a instalação dos paineis
+            solares em casa faz o consumidor alcançar a independência energética e economizar na conta de luz.</p>
+
+          <a href="https://wa.me/5592982592715?text=Adorei%20seu%20artigo" target="_blank" class="fs-1 text-decoration-none text-success">Faça seu orçamento</a>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="slcs-dsktp" data-aos="fade-left">
+      <div class="slcs-padrao">
+        <div class="slcs-info">
+          <div class="slcs-icon">
+            <h2 class="fw-bold">Residêncial</h2>
+            <i class="bi bi-house-door-fill icon"></i>
+          </div>
+          <p class="slcs-p">Com a consultoria especializada, analise do seu consumo de energia, a instalação dos paineis
+            solares em casa faz o consumidor alcançar a independência energética e economizar na conta de luz.</p>
+
+          <a href="https://wa.me/5592982592715?text=Adorei%20seu%20artigo" target="_blank" class="fs-1 text-decoration-none text-success">Faça seu orçamento</a>
+
+        </div>
+        <div>
+          <a href="#" class="img-link">
+            <img class="slcs-img" src="./src/images/casa.svg">
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="" data-aos="fade-right">
+      <div class="slcs-padrao middle">
+        <div>
+          <a href="#" class="img-link">
+            <img class="slcs-img" src="./src/images/telhado.svg">
+          </a>
+        </div>
+        <div class="slcs-info">
+          <div class="slcs-icon">
+            <h2 class="fw-bold">Comercial</h2>
+            <i class="bi bi-lightbulb-fill"></i>
+          </div>
+          <p class="slcs-p">A energia solar também é um solução para o pequeno empresário e comerciantes, permitindo que
+            se economize significativamente em suas contas de energia elétrica.</p>
+
+          <a href="https://wa.me/5592982592715?text=Adorei%20seu%20artigo" target="_blank" class="fs-1 text-decoration-none text-success">Faça seu orçamento</a>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="slcs-mobile" data-aos="fade-right">
+      <div class="slcs-padrao">
+        <div>
+          <a href="#" class="img-link">
+            <img class="slcs-img" src="./src/images/rural.svg">
+          </a>
+        </div>
+        <div class="slcs-info">
+          <div class="slcs-icon">
+            <h2 class="fw-bold">Rural</h2>
+            <i class="bi bi-house-door-fill icon"></i>
+          </div>
+          <p class="slcs-p">Desde a irrigação até o bombeamento solar, o sistema fotovotaico se mostra essencial para
+            economia rural e para o bem estar das familias que moram nessas áreas.</p>
+
+          <a href="https://wa.me/5592982592715?text=Adorei%20seu%20artigo" target="_blank" class="fs-1 text-decoration-none text-success">Faça seu orçamento</a>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="slcs-dsktp" data-aos="fade-left">
+      <div class="slcs-padrao">
+        <div class="slcs-info">
+          <div class="slcs-icon">
+            <h2 class="fw-bold">Rural</h2>
+            <i class="bi bi-house-door-fill icon"></i>
+          </div>
+          <p class="slcs-p">Desde a irrigação até o bombeamento solar, o sistema fotovotaico se mostra essencial para
+            economia rural e para o bem estar das familias que moram nessas áreas.</p>
+
+          <a href="https://wa.me/5592982592715?text=Adorei%20seu%20artigo" target="_blank" class="fs-1 text-decoration-none text-success">Faça seu orçamento</a>
+
+        </div>
+        <div>
+          <a href="#" class="img-link">
+            <img class="slcs-img" src="./src/images/rural.svg">
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <section class="modelos">
+
+      <div class="modelos-title">
+        <h2 class="fw-bold">Modelos</h2>
+      </div>
+
+      <div class="modelos-main">
+        <div class="modelos-item off-grid">
+          <h3>Off-Grid</h3>
+
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div class="modelos-item center on-grid">
+          <h3>On-Grid</h3>
+
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div class="modelos-item bombeamento">
+          <h3>Bombeamento solar</h3>
+
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="jumbotron jumbotron-fluid" id="sobrenos">
+        <div class="container">
+          <h1 class="display-4 jumbo-head mb-5">Invista em energia solar e comece a economizar dinheiro hoje mesmo!</h1>
+          <a href="https://wa.me/5592982592715?text=Adorei%20seu%20artigo" target="_blank" class="jumbo-a">Entre em contato</a>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="py-5 px-4 faq" id="Faq">
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+              aria-expanded="true" aria-controls="collapseOne">
+              Qual a vida útil da usina?
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              Após a instalação dos painéis fotovoltaicos, os equipamentos podem durar mais de 25 anos e provavelmente
+              com 80% de seu desempenho original.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Quem mora em um prédio pode instalar o sistema fotovoltaico?
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              Sim, desde que a pessoa seja o proprietário da cobertura ou que o condomínio tenha uma área no topo do
+              prédio suficiente para a instalação das placas para o uso comum.
+              Sempre verifique as regras do condomínio antes da aquisição.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Quanto custa a manutenção de um sistema solar?
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              Os sistemas fotovoltaicos funcionam 11h por dia, gerando energia diariamente e precisam de baixíssima
+              manutenção.
+              Aliás, as manutenções que geralmente são recomendadas podem ser feitas pelo próprio proprietário.
+              Lavar os módulos a cada 6 meses se ficarem muito sujos.
+              Geralmente quando a chuva não se encarrega da limpeza, como em casos de pássaros e poluição.
+              Tudo se resolve com um jato d’água ou vassouras de cerdas macias.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="bg-dark footer">
+
+      <section class="footer-main">
+        <div class="footer-title">
+          <p class="text-light">BW Engenharia</p>
+        </div>
+
+        <div class="footer-midle">
+
+          <div class="midle-title">
+            <p class="text-light">Entre em contato:</p>
+          </div>
+          
+          <div class="midle-main d-flex flex-column" >
+            <a class="text-light footer-mail text-decoration-none">bwengenharia@mail.com</a>
+    
+            <a class="text-light footer-tel text-decoration-none mt-2">(92)9xxxx-xxxx</a>
+          </div>
+        </div>
+
+        <div class="footer-follow">
+          <p class="text-light follow-title">Nossas Redes:</p>
+          <ul class="d-flex gap-3">
+            <li>
+              <a href="#">
+                <i class="bi bi-whatsapp"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="bi bi-instagram"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="bi bi-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="bi bi-linkedin"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="footer-devs">
+        <p class="text-light text-center">
+          Desenvolvivo por Oberdan Angelim e Roberto Falcão
+        </p>
+      </section>
+
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+      <a href="https://wa.me/5592982592715?text=Adorei%20seu%20artigo" style="position:fixed;width:60px;height:60px;bottom:40px;right:40px;background-color:#25d366;color:#FFF;border-radius:50px;text-align:center;font-size:30px;box-shadow: 1px 1px 2px #888;
+        z-index:1000;" target="_blank">
+        <i style="margin-top:16px" class="fa fa-whatsapp"></i>
+      </a>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+      });
+    </script>
+
+</body>
+
+</html>

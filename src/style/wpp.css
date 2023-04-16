@@ -1,0 +1,33 @@
+.botao-wpp {
+  position: fixed;
+  right: 0.5em;
+  bottom: 1em;
+  z-index: 1000;
+}
+
+.botao-wpp .bi{
+  border-radius: 2em;
+}
+
+
+@media screen and (min-width: 768px){
+  .botao-wpp{
+    position: fixed;
+    right: 2em;
+    bottom: 5%;
+    z-index: 1000;
+      
+  }
+
+  .botao-wpp .bi {
+    font-size: 30px;
+  }
+  
+}
+
+@media screen and (min-width: 1024px) {
+  .botao-wpp {
+    bottom: 20%;
+  }
+}
+

@@ -1,0 +1,34 @@
+.jumbotron {
+  text-align: center;
+  color: #ffffff;
+  background: steelblue;
+  padding: 5em 0 5em;
+  border-top: 1px solid #407293;
+  margin-top: 2em;
+}
+
+.jumbo-title {
+  font-size: 5em;
+  font-weight: 500;
+}
+
+.jumbo-head {
+  text-transform: uppercase;
+  text-shadow: -3px 4px 3px var(--carvao);
+}
+
+.jumbo-a {
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  background-color: darkgreen;
+  padding: 0.6em;
+  border-radius: 2em;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 1440px) {
+  .jumbo-a {
+    font-size: 25px;
+  }
+}

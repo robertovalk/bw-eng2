@@ -1,0 +1,78 @@
+.modelos {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.modelos-title {
+  text-transform: uppercase;
+  margin: 3em 0;
+}
+
+.modelos-main {
+  padding: 0 1em;
+}
+
+.modelos-item h3 {
+  font-weight: 800;
+}
+
+.off-grid {
+  background-image: url(../images/offgrid.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 2em 0;
+  color: white;
+  font-size: 19px;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px black;
+}
+
+.on-grid {
+  background-image: url(../images/offgrid.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 2em 0;
+  color: white;
+  font-size: 19px;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px black;
+}
+
+.bombeamento {
+  background-image: url(../images/bombaSolar.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: 90%;
+  padding: 2em 0;
+  color: white;
+  font-size: 19px;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px black;
+}
+
+.center {
+  margin: 2em 0;
+}
+
+@media screen and (min-width: 768px) {
+  .modelos-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .off-grid, .on-grid, .bombeamento {
+    padding: 6em 1em;
+  }
+
+}
+
+
+@media screen and (min-width: 1440px) {
+  .modelos-main {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1em;
+  }
+}

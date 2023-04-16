@@ -1,0 +1,29 @@
+
+.header-hero {
+    background-image: url(../images/unsplash_XGAZzyLzn18.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: bottom;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+.text-hero {
+    padding: 2em 0;
+}
+
+.ni-dsktp {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .ni-mobile {
+        display: none;
+    }
+    
+    .ni-dsktp {
+        display: block;
+    }
+
+    
+}

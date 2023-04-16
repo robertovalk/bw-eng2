@@ -1,0 +1,115 @@
+.about-wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: center;
+  text-align: justify;
+}
+
+.about-title {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: center;
+  background-color: gold;
+  color: black;
+  text-transform: uppercase;
+  width: 100%;
+  padding: 1em;
+}
+
+.about-title h2 {
+  font-weight: bold;
+}
+
+
+.bw {
+  color: var(--carvao);
+  margin-left: 4.3px;
+  padding: 4.3px;
+  border-radius: 3px;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px var(--carvao);
+}
+
+.about-dsktp {
+  display: none;
+  text-align: justify;
+}
+
+@media screen and (min-width: 768px) {
+  .about-dsktp {
+    display: block;
+  }
+
+  .about{
+    display: none;
+    text-align: justify;
+  }
+  
+  .about-wrapper-dsktp {
+    display: flex;
+  }
+
+  .about-title-dsktp {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(249,232,51,1) 0%, rgba(250,196,59,1) 100.2% );
+    color: black;
+    padding: 8em 1em;
+    text-align: justify;
+  }
+
+  .about-wrapper-dsktp h2{
+    font-size: 4em;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: justify;
+  }
+
+  .about-img-dsktp {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .about-main-dsktp {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+  
+  .about-wrapper-dsktp {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .about-title-dsktp {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    background-color: gold;
+    color: black;
+    text-align: justify;
+  }
+
+  .about-objetivos-dsktp {
+    padding: 2em 1em;
+  }
+
+  .objetivos-listaItem-dsktp {
+    display: flex;
+    align-items: baseline;
+    gap: 1em;
+  }
+  
+  .about-img-dsktp {
+    display: block;
+    background-image: url(../images/bulb.svg);
+    background-repeat: no-repeat;
+    background-position: 25% 33%;
+    background-size: cover;
+
+  }
+}

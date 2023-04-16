@@ -1,0 +1,28 @@
+@import url('../style/reset.css');
+@import url('../style/fonts.css');
+@import url('../style/wpp.css');
+@import url('../style/navbar.css');
+@import url('../style/about.css');
+@import url('../style/main.css');
+@import url('../style/slcs.css');
+@import url('../style/modelos.css');
+@import url('../style/jumbotron.css');
+@import url('../style/footer.css');
+
+
+:root {
+    --background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(193,193,193,1) 100%);
+    --font-primary: 'Inter';
+    --branco: #ffffff;
+    --bege: #fffbf5;
+    --navbar-color-hover: #FFCC00;
+    --navbar-color-active: #EDD456;
+    --navbar-text-color: #000000;
+    --carvao: #464646;
+    --main-color-primary: #FBAB7E;
+    --raio: \F46C;
+}
+
+:root p {
+    text-align: justify;
+}
