@@ -67,24 +67,25 @@
                 <div class="modal-dialog modal-lg modal-dialog-centered">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title">Título do Modal</h5>
+                      <h5 class="modal-title">Faça uma </h5>
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
 
                       <!---FORM INSIDE MODAL-->
-                      <form class='needs-validation' method="post" action="./">
+                      <form class='needs-validation' method="POST">
                         <!-- 2 column grid layout with text inputs for the first and last names -->
                         <div class="row mb-2">
                           <div class="col">
                             <div class="form-floating">
-                              <input type="text" class="form-control" required id="form-name" placeholder="João">
+                              <input type="text" class="form-control"
+                               name="nome" required id="form-name" placeholder="João">
                               <label for="form-name">Nome</label>
                             </div>
                           </div>
                           <div class="col">
                             <div class="form-floating mb-3">
-                              <input type="text" class="form-control" required id="form-lastname" placeholder="João">
+                              <input type="text" class="form-control" required id="form-lastname" placeholder="João" name="sobrenome">
                               <label for="form-lastname">Sobrenome</label>
                             </div>
                           </div>
@@ -93,49 +94,55 @@
                         <div class="row mb-2">
                           <div class="col">
                             <div class="form-floating">
-                              <input type="text" class="form-control" required id="form-name" placeholder="João">
-                              <label for="form-name">Cidade</label>
+                              <input type="text" class="form-control" required id="form-city" 
+                              placeholder="Manaus" name="cidade">
+                              <label for="form-city">Cidade</label>
                             </div>
                           </div>
                           <div class="col">
                             <div class="form-floating mb-3">
-                              <input type="number" class="form-control" required id="form-lastname"
-                                data-mdb-input-mask="+48 999-999-999">
-                              <label for="form-lastname">Telefone</label>
+                              <input type="number" class="form-control" required id="form-telefone"
+                                data-mdb-input-mask="+48 999-999-999" name="telefone">
+                              <label for="form-telephone">Telefone</label>
                             </div>
                           </div>
                         </div>
                         <!-- Email input -->
-                        <div class="form-floating mb-4">
-                          <input type="email" class="form-control" required id="form-email"
-                            placeholder="name@example.com">
-                          <label for="form-email">Email</label>
+                        <div class="row mb-2">
+                          <div class="col">
+                            <div class="form-floating mb-4">
+                            <input type="email" class="form-control" required id="form-email"
+                            placeholder="name@example.com" name="email">
+                            <label for="form-email">Email</label>
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="form-floating mb-4">
+                            <input type="number" class="form-control" required id="form-value"
+                            placeholder="R$ 450" name="fatura">
+                            <label for="form-email">Valor da conta de energia</label>
+                            </div>
+                          </div>
                         </div>
                         <!-- Message input -->
-
-
                         <div class="form-floating mb-4">
-                          <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+                          <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" name="texto"
                             style="height: 100px"></textarea>
                           <label for="floatingTextarea2">Comentário</label>
                         </div>
-
-
-
                         <!-- Checkbox -->
                         <div class="form-check d-flex justify-content-center mb-4 no-validate">
-                          <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
+                          <input class="form-check-input me-2" type="checkbox" value="1" id="form2Example33" checked name="newsletter" />
                           <label class="form-check-label" for="form2Example33">
-                            Subscribe to our newsletter
+                            Inscreva-se na nossa newsletter
                           </label>
                         </div>
 
-                        <input class="btn btn-primary" type="submit" value="Submit">
+                        <input class="btn btn-primary" type="submit" value="Enviar">
                       </form>
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Voltar</button>
-                      <button type="button" class="btn btn-primary" action="post">Enviar</button>
                     </div>
                   </div>
                 </div>
@@ -168,7 +175,7 @@
           </li>
           <li class="objetivos-listaItem my-4">
             <p class="d-inline rounded-circle fs-1 bg-warning bg-gradient px-2">3</p>
-            <h3 class="fs-5">Se você estiver procurando por uma empresa de energia solar que possa oferecer solições personalizadas e confiavéis,<strong> <a href="https://wa.me/5592982592715?text=Adorei%20seu%20artigo" target="_blank">entre em contato</a> </strong> conosco. Estamos ansiosos para trabalhar com você.</h3>
+            <h3 class="fs-5">Se você estiver procurando por uma empresa de energia solar que possa oferecer solições personalizadas e confiavéis,<strong> <a href="https://wa.me/5592982592715?text=Olá%20acessei%20o%20site%20de%20vocês%20e%20gostaria%20de%20saber%20mais%20sobre%20energia%20solar!" target="_blank">entre em contato</a> </strong> conosco. Estamos ansiosos para trabalhar com você.</h3>
           </li>
         </ul>
       </div>
@@ -201,7 +208,7 @@
             </li>
             <li class="objetivos-listaItem-dsktp">
               <p class="fs-1 bg-warning bg-gradient px-2">3</p>
-              <h3 class="">Se você estiver procurando por uma empresa de energia solar que possa oferecer solições personalizadas e confiavéis,<strong> <a href="https://wa.me/5592982592715?text=Adorei%20seu%20artigo" target="_blank">entre em contato</a> </strong> conosco. Estamos ansiosos para trabalhar com você.</h3>
+              <h3 class="">Se você estiver procurando por uma empresa de energia solar que possa oferecer solições personalizadas e confiavéis,<strong> <a href="https://wa.me/5592982592715?text=Olá%20acessei%20o%20site%20de%20vocês%20e%20gostaria%20de%20saber%20mais%20sobre%20energia%20solar!" target="_blank">entre em contato</a> </strong> conosco. Estamos ansiosos para trabalhar com você.</h3>
             </li>
           </ul>
         </div>
@@ -372,7 +379,7 @@
           <p class="slcs-p">Desde a irrigação até o bombeamento solar, o sistema fotovotaico se mostra essencial para
             economia rural e para o bem estar das familias que moram nessas áreas.</p>
 
-          <a href="https://wa.me/5592982592715?text=Adorei%20seu%20artigo" target="_blank" class="fs-1 text-decoration-none text-success">Faça seu orçamento</a>
+          <a href="https://wa.me/5592982592715?text=Olá%20acessei%20o%20site%20de%20vocês%20e%20gostaria%20de%20saber%20mais%20sobre%20energia%20solar!" target="_blank" class="fs-1 text-decoration-none text-success">Faça seu orçamento</a>
 
         </div>
         <div>
@@ -412,7 +419,7 @@
       <div class="jumbotron jumbotron-fluid" id="sobrenos">
         <div class="container">
           <h1 class="display-4 jumbo-head mb-5">Invista em energia solar e comece a economizar dinheiro hoje mesmo!</h1>
-          <a href="https://wa.me/5592982592715?text=Adorei%20seu%20artigo" target="_blank" class="jumbo-a">Entre em contato</a>
+          <a href="https://wa.me/5592982592715?text=Olá%20acessei%20o%20site%20de%20vocês%20e%20gostaria%20de%20saber%20mais%20sobre%20energia%20solar!" target="_blank" class="jumbo-a">Entre em contato</a>
         </div>
       </div>
     </section>
@@ -526,7 +533,7 @@
       </section>
 
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-      <a href="https://wa.me/5592982592715?text=Adorei%20seu%20artigo" style="position:fixed;width:60px;height:60px;bottom:40px;right:40px;background-color:#25d366;color:#FFF;border-radius:50px;text-align:center;font-size:30px;box-shadow: 1px 1px 2px #888;
+      <a href="https://wa.me/5592982592715?text=Olá%20acessei%20o%20site%20de%20vocês%20e%20gostaria%20de%20saber%20mais%20sobre%20energia%20solar!" style="position:fixed;width:60px;height:60px;bottom:40px;right:40px;background-color:#25d366;color:#FFF;border-radius:50px;text-align:center;font-size:30px;box-shadow: 1px 1px 2px #888;
         z-index:1000;" target="_blank">
         <i style="margin-top:16px" class="fa fa-whatsapp"></i>
       </a>
