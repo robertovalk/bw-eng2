@@ -10,9 +10,6 @@
   <meta name="keywords" content="energia solar, placa solar, energia, bombeamento solar, engenharia">
   <meta name="description" content="A bw engenharia oferece serviço de instalçao de placas solares em industrias, residencias, comercios e no meio rural">
 
-
-
-
   <!--  IMPORT CSS FILES  -->
   <link rel="stylesheet" href="src/style/global.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -24,7 +21,7 @@
   <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
     crossorigin="anonymous"></script>
-  <script defer src="index.js"></script>
+  <script defer src="./src/script/formHandle.js"></script>
 
 </head>
 
@@ -73,7 +70,7 @@
                     <div class="modal-body">
 
                       <!---FORM INSIDE MODAL-->
-                      <form class='needs-validation' method="POST">
+                      <form class='needs-validation' id="form-orcamento" method="POST">
                         <!-- 2 column grid layout with text inputs for the first and last names -->
                         <div class="row mb-2">
                           <div class="col">
@@ -138,7 +135,7 @@
                           </label>
                         </div>
 
-                        <input class="btn btn-primary" type="submit" value="Enviar">
+                        <input class="btn btn-primary" id="botaoEnviarForm" type="submit" value="Enviar">
                       </form>
                     </div>
                     <div class="modal-footer">
@@ -153,7 +150,7 @@
           </div>
         </div>
       </div>
-    </div>s
+    </div>
   </header>
 
   <section class="about">
