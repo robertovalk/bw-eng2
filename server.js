@@ -15,6 +15,7 @@ app.get('/', (req, res)=> {
 // static routes
 app.use('/src/images', express.static(path.resolve('./src/images')))
 app.use('/src/style', express.static(path.resolve('./src/style')))
+app.use('/src/script', express.static(path.resolve('./src/script')))
 
 // modal post 
 app.post('/', (req, res)=> {
@@ -136,5 +137,6 @@ app.post('/', (req, res)=> {
   
   console.log(user)
 
-  res.redirect('/')
+ 
+
 })
