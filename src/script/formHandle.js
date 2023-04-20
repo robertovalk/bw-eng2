@@ -1,9 +1,20 @@
-const form = document.querySelector("#form-orcamento")
+console.log('entrou no form handler');
 
-console.log(form)
+const form = document.querySelector('#form-orcamento');
+const button = document.querySelector('#botaoEnviarForm')
 
-form.addEventListener("submit", (e) => { 
-  e.preventDefault()
-  console.log('evitou o envio do form')
-  this.trigger('submit')
+button.addEventListener('click', (e)=> {
+  e.preventDefault();
+  console.log('click submit')
+  const dataForm = new FormData(form)
+  console.log(dataForm)
+
+  fetch('http://localhost:3000/', {
+    method: 'POST',
+    body: dataForm,
+    mode: 'cors',
+    cache: 'default'
+  })
+
+  alert('Success');
 })
