@@ -136,7 +136,5 @@ app.post('/', (req, res)=> {
   enviaEmail(emailOpcoes)
   
   console.log(user)
-
- 
-
+  res.status(200);
 })
