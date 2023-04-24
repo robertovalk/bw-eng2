@@ -1,12 +1,15 @@
 import express from 'express';
 import path from 'path'
 import { enviaEmail } from './mail.js';
+import cors from 'cors';
 
 const app = express();
 const PORT = process.env.PORT || 3000
 
 app.listen(PORT, ()=> console.log('running at: http://localhost:3000'))
 app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(cors());
 
 app.get('/', (req, res)=> {
   res.sendFile(path.resolve('./index.html'))
@@ -36,7 +39,7 @@ app.post('/', (req, res)=> {
 
   const emailOpcoes = {
     from: `${nome} <${email}>`,
-    to: "oberdan.dev@gmail.com",
+    to: "oberdanorris@gmail.com",
     subject: `Proposta de Orçamento de ${nome}`,
     text: `Orçamento pelo site - Cliente: ${nome}`,
     html: `<!DOCTYPE html>
@@ -136,5 +139,6 @@ app.post('/', (req, res)=> {
   enviaEmail(emailOpcoes)
   
   console.log(user)
-  res.status(200);
+
+  return res.status(201)
 })

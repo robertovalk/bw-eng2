@@ -2,41 +2,45 @@ console.log('entrou no form handler');
 
 const form = document.querySelector('#form-orcamento');
 const button = document.querySelector('#botaoEnviarForm');
-var myModalEl = document.getElementById('modalHeader');
-var modal = new bootstrap.Modal(myModalEl);
+const myModal = new bootstrap.Modal('#modalHeader')
+const popupSuccess = document.querySelector('#popup-success')
+const popupSuccessButton = document.querySelector('#popupCloseButton');
 
-const formSubmit = async (e) => {
+button.addEventListener('click',  async function(e){
   e.preventDefault();
-  try{
-    const elementsForm = form.elements;
-  const body = {}
-  for(i = 0; i < elementsForm.length; i++) {
-    const item = elementsForm.item(i);
-    body[item.name] = item.value;
+  const elements = form.elements;
+  const body = {
+    nome: elements['nome'].value,
+    sobrenome: elements['sobrenome'].value,
+    cidade: elements['cidade'].value,
+    telefone: elements['telefone'].value,
+    email: elements['email'].value,
+    fatura: elements['fatura'].value,
+    texto: elements['texto'].value,
+    newsletter: elements['newsletter'].value,
   }
+  const jsonBody  = JSON.stringify(body)
 
-  const formData = new FormData(form);
-  const formProps = Object.fromEntries(formData);
-
-  console.log(formProps);
-  console.log(body);
-
-  await fetch('http://localhost:3000/', {
+    const postEmail = fetch('http://localhost:3000', {
     method: 'POST',
-    body,
+    headers: {
+      'Content-Type':'application/json',
+      'Accept':'application/json'
+    },
+    body: jsonBody
   })
 
-  console.log('entrou no envio')
-
-
-  alert('Successfully submitted')
-  console.log('enviou')
-  modal.hide();
-  }catch(e){
-    alert('Ocorreu um erro, tente enviar novamente!')
-  }
+  postEmail.then((success) => console.log('deu sucesso', success)).catch(err => console.log('error no fetch', err))
+    
+  myModal.hide();
+  popupSuccess.classList.add('open-popup')
   
- 
-}
+  setTimeout(()=> {
+    popupSuccess.classList.remove('open-popup')
+  }, 4000)
+})
 
-button.on('click', formSubmit);
+
+  popupSuccessButton.addEventListener('click', ()=> {
+    popupSuccess.classList.remove('open-popup')
+  })
