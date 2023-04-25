@@ -9,46 +9,26 @@ const popupSuccessButton = document.querySelector('#popupCloseButton');
 form.addEventListener('submit',  async function(e){
   e.preventDefault();
 
-  const payload = new FormData(form)
-  console.log([...payload])
+  const prePayload = new FormData(form);
+  const data = Object.fromEntries(prePayload)
+  console.log(data)
 
-  fetch('http://localhost:3000/', { 
-    method: 'POST',
-    body: payload
-  }).then(res => res.json())
-    .then(data => console.log(data))
-    .catch(err => console.error('Erro ao fazer fetch: \n', err))
-
-
-/*  const elements = form.elements;
-  const body = {
-    nome: elements['nome'].value,
-    sobrenome: elements['sobrenome'].value,
-    cidade: elements['cidade'].value,
-    telefone: elements['telefone'].value,
-    email: elements['email'].value,
-    fatura: elements['fatura'].value,
-    texto: elements['texto'].value,
-    newsletter: elements['newsletter'].value,
-  }
-  const jsonBody  = JSON.stringify(body)
-
-    const postEmail = fetch('http://localhost:3000', {
+  fetch('http://localhost:3000', { 
     method: 'POST',
     headers: {
-      'Content-Type':'application/json',
-      'Accept':'application/json'
+      'Content-Type': 'application/json'
     },
-    body: jsonBody
-  }).then((success) => console.log('deu sucesso', success))
-    .catch(err => console.log('error no fetch', err))
-    
-  myModal.hide();
-  popupSuccess.classList.add('open-popup')
-  
-  setTimeout(()=> {
-    popupSuccess.classList.remove('open-popup')
-  }, 4000) */
+    body: JSON.stringify(data)
+  }).then(res => res.json())
+    .then(data =>  { 
+          myModal.hide();
+          popupSuccess.classList.add('open-popup')
+          setTimeout(()=> {
+            popupSuccess.classList.remove('open-popup')
+          }, 4000) 
+        }
+    )
+    .catch(err => alert('Houve algum erro ao enviar a sua'))
 })
 
 

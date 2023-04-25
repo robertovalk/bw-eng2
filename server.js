@@ -144,5 +144,5 @@ app.post('/', (req, res)=> {
   
   console.log(user)
 
-  return res.status(201)
+  return res.status(201).send({message: "created"})
 })
