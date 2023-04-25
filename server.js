@@ -39,7 +39,7 @@ app.post('/', (req, res)=> {
 
   const emailOpcoes = {
     from: `${nome} <${email}>`,
-    to: "oberdanorris@gmail.com",
+    to: "carloseduardoaraujo634@gmail.com",
     subject: `Proposta de Orçamento de ${nome}`,
     text: `Orçamento pelo site - Cliente: ${nome}`,
     html: `<!DOCTYPE html>
@@ -136,7 +136,11 @@ app.post('/', (req, res)=> {
     </html>`,
   }
 
-  enviaEmail(emailOpcoes)
+  try{
+    enviaEmail(emailOpcoes)
+  }catch(e){
+    return console.log('não foi possível enviar')
+  }
   
   console.log(user)
 

@@ -6,9 +6,21 @@ const myModal = new bootstrap.Modal('#modalHeader')
 const popupSuccess = document.querySelector('#popup-success')
 const popupSuccessButton = document.querySelector('#popupCloseButton');
 
-button.addEventListener('click',  async function(e){
+form.addEventListener('submit',  async function(e){
   e.preventDefault();
-  const elements = form.elements;
+
+  const payload = new FormData(form)
+  console.log([...payload])
+
+  fetch('http://localhost:3000/', { 
+    method: 'POST',
+    body: payload
+  }).then(res => res.json())
+    .then(data => console.log(data))
+    .catch(err => console.error('Erro ao fazer fetch: \n', err))
+
+
+/*  const elements = form.elements;
   const body = {
     nome: elements['nome'].value,
     sobrenome: elements['sobrenome'].value,
@@ -28,16 +40,15 @@ button.addEventListener('click',  async function(e){
       'Accept':'application/json'
     },
     body: jsonBody
-  })
-
-  postEmail.then((success) => console.log('deu sucesso', success)).catch(err => console.log('error no fetch', err))
+  }).then((success) => console.log('deu sucesso', success))
+    .catch(err => console.log('error no fetch', err))
     
   myModal.hide();
   popupSuccess.classList.add('open-popup')
   
   setTimeout(()=> {
     popupSuccess.classList.remove('open-popup')
-  }, 4000)
+  }, 4000) */
 })
 
 
