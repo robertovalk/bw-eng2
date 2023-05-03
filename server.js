@@ -39,7 +39,7 @@ app.post('/', (req, res)=> {
 
   const emailOpcoes = {
     from: `${nome} <${email}>`,
-    to: "carloseduardoaraujo634@gmail.com",
+    to: "rfa  lcaao@gmail.com",
     subject: `Proposta de Orçamento de ${nome}`,
     text: `Orçamento pelo site - Cliente: ${nome}`,
     html: `<!DOCTYPE html>
@@ -97,7 +97,7 @@ app.post('/', (req, res)=> {
       </head>
       <body>
         <header>
-          <h1>Proposta de Orçamento de Energia Solar</h1>
+          <h1>Proposta de Orçamento de Serviço</h1>
         </header>
         <div class="card">
           <div class="field">
@@ -130,7 +130,7 @@ app.post('/', (req, res)=> {
           </div>
         </div>
         <footer>
-          <p>Empresa de Energia Solar © 2023 - Todos os direitos reservados.</p>
+          <p>Fiapotec © 2023 - Todos os direitos reservados.</p>
         </footer>
       </body>
     </html>`,
