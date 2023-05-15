@@ -8,7 +8,7 @@ const popupSuccessButton = document.querySelector('#popupCloseButton');
 
 form.addEventListener('submit',  async function(e){
   e.preventDefault();
-
+ 
   const prePayload = new FormData(form);
   const data = Object.fromEntries(prePayload)
   console.log(data)
